@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    </head>
+    <body>
+        <a-scene physics= "debug:true; gravity: -6;" > 
+        <a-camera>
+    <a-cursor color="#ffae00"></a-cursor>
+</a-camera>
+        <a-plane static-body
+        rotation="-90 0 0"
+        position="0 0 -3"
+        height="300"
+        width="300"
+        color="#346f4e"
+        ></a-plane>
+        <a-sphere dynamic-body
+    color="#99ff00"
+    radius="2"
+    position="0 15 -20"
+    ></a-sphere>
+     <a-box static-body
+    color="#00fbff"
+    position="0 11 -20"
+    height="1"
+    width="10"
+    length="2"
+    rotation="0 0 5" ></a-box>
+    <a-box static-body
+    color="#00fbff"
+    position="-7 5 -20"
+    height="1"
+    width="10"
+    length="2"
+    rotation="0 0 -15" ></a-box>
+    <a-cylinder static-body color="crimson" height="2.5" radius="2" position="1 1 -20"></a-cylinder>
+     <a-plane static-body
+        rotation="-90 0 0"
+        position="10 0.5 -20"
+        height="10"
+        width="10"
+        color="red"
+        animation="property:position;
+        from: 10 0.5 -20;
+        to: 10 20 -20;
+        dur: 2000;
+        startEvents:click;
+        "
+        ></a-plane>
+        <a-box static-body
+        rotation="0 90 0"
+        position="15 5 -20"
+        height="10"
+        length="10"
+        width="10"
+        color="green"
+        animation="property:position;
+        from: 15 5 -20;
+        to: 15 25 -20;
+        dur: 2000;
+        startEvents:click;
+        "
+        ></a-box>
+         <a-box dynamic-body
+        rotation="0 90 0"
+        position="-15 15 -20"
+        height="30"
+        length="10"
+        width="10"
+        color="green"
+        ></a-box>
+         <a-box dynamic-body
+        rotation="0 90 0"
+        position="18 5 -20"
+        height="10"
+        length="10"
+        width="10"
+        color="green"
+        ></a-box>
+        <a-box dynamic-body
+        rotation="0 90 0"
+        position="25 15 -20"
+        height="30"
+        length="10"
+        width="10"
+        color="red"
+       ></a-box>
+        
+        <a-box static-body
+        rotation="0 0 0"
+        position="20 10 -10"
+        height="20"
+        length="10"
+        width="10"
+        color="orange"
+       animation="
+                property: rotation;
+                from: 0 0 0;
+                to: 0 360 0;
+                dur: 200;
+                easing: linear;
+                loop: true;
+                "
+        ></a-box>
+        </a-scene>
+    </body>
+</html>
